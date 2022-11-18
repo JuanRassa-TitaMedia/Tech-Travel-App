@@ -14,7 +14,7 @@ export default createGlobalStyle`
     height: 100%;
   }
   body {
-    background-color: #f6f7fb;
+    background-color: #000;
     -webkit-font-smoothing: antialiased;
   }
   body, input-security, button {
