@@ -26,8 +26,9 @@ module.exports = {
     camelcase: 'off',
     'no-console': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'react/props-types': 'off',
+    'react/prop-types': 'off',
     'react/jsx-no-bind': 'off',
+    'react/jsx-no-constructed-context-values': 'off', // consider the use of useMemo()
     'prettier/prettier': [
       'error',
       {
