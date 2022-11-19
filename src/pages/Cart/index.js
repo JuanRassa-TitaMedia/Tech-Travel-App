@@ -17,7 +17,7 @@ function Cart() {
     <Container>
       <ContainerList>
         {state.cart.map((el) => (
-          <TravelItem>
+          <TravelItem key={el.id}>
             <img src={el.photo} alt={el.title} />
             <Info>
               <p>{el.title}</p>
