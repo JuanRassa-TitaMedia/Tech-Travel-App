@@ -8,6 +8,7 @@ import {
   Info,
   Quantity,
   Subtotal,
+  Total,
 } from './styles';
 
 function Cart() {
@@ -25,13 +26,16 @@ function Cart() {
             </Info>
             <Quantity readOnly type="number" value={el.quantity} />
             <Subtotal>
-              <p>{el.quantity * el.price}</p>
+              <p>${el.quantity * el.price}</p>
               <button type="button">
                 <MdDelete size={24} color="0676d9" />
               </button>
             </Subtotal>
           </TravelItem>
         ))}
+        <Total>
+          <span>Total</span> ${state.totalCost}
+        </Total>
       </ContainerList>
     </Container>
   );

@@ -18,18 +18,24 @@ function Home() {
 
   function handleAddToCart(travel) {
     const copyCart = [...state.cart];
+    let copytTotalCost = state.totalCost;
     const travelIndex = copyCart.findIndex((el) => el.id === travel.id);
     if (travelIndex >= 0) {
       copyCart[travelIndex].quantity += 1;
+      copyCart.map((el) => {
+        copytTotalCost += Number(el.quantity * el.price);
+        return copytTotalCost;
+      });
     } else {
       copyCart.push({ ...travel, quantity: 1 });
+      copytTotalCost = Number(travel.price);
     }
 
     setState({
       cart: copyCart,
+      totalCost: copytTotalCost,
     });
   }
-
   return (
     <Container>
       <List>

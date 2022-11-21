@@ -3,6 +3,7 @@ import React, { createContext, useState } from 'react';
 const DEFAULT_VALUE = {
   state: {
     cart: [],
+    totalCost: 0,
   },
   setState: () => {},
 };
